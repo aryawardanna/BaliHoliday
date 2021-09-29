@@ -7,6 +7,7 @@
  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
 // scss-docs-start import-stack
 // Configuration
+@import "colorVariables";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -96,6 +97,7 @@ header {
         &.active {
           a.nav-link {
             color: $primary;
+            text-decoration: none;
           }
         }
         a {
@@ -104,6 +106,7 @@ header {
             color: $gray-900;
             padding-left: 1rem;
             padding-right: 1rem;
+            text-decoration: none;
             &:hover {
               text-decoration: underline;
             }
@@ -151,10 +154,12 @@ section {
     margin-bottom: 0;
     border-radius: 0.9375rem;
     overflow: hidden;
+    text-decoration: none;
   }
 
   .meta-wrapper {
     margin-top: 1rem;
+    text-decoration: none;
     h5{
       font-size: 1.125rem;
       margin-bottom: 2px;
@@ -210,6 +215,7 @@ section {
       display: flex;
       justify-content: flex-end;
       flex-direction: column;
+      text-decoration: none !important;
     }
   }
 
@@ -225,7 +231,42 @@ section {
     }
   }
 }
+
 .oke {
-  text-decoration: unset;
+  text-decoration: none !important;
   color: black;
+}
+
+.testimonial-hero, .testimonial-hero img{
+  width: 365px;
+  height: 500px;
+}
+
+footer {
+  border-top: 1px solid $gray-200;
+  padding-top: 50px;
+
+  .brand-tagline {
+    margin-top: 8px;
+    color: $gray-500;
+    font-weight: 300;
+  }
+
+  .list-group-item {
+    padding: 0.3125rem 0;
+    border: 0;
+
+    a,
+    span {
+      text-decoration: none;
+      color: $gray-500;
+      font-weight: 300;
+    }
+
+  }
+  .copyrights {
+    margin: 50px 0;
+    font-weight: 300;
+    color: $gray-500;
+  }
 }
